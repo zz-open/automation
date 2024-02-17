@@ -8,6 +8,9 @@ help:
 test:
 	@echo "test ..."
 
-.PHONY:	run
+.PHONY:	create-requirements run
+create-requirements:
+	@conda list -e > requirements.txt
+
 run:
 	@python main.py

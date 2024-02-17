@@ -9,7 +9,7 @@ from playwright.async_api import Playwright, async_playwright, expect
 from common.utils import parse_yaml
 
 
-debug = True
+debug = True  # False
 if debug:
     conf = parse_yaml("E:\jungle\project_conf\ali_dms_login_conf.yaml")
 else:
