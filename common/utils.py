@@ -19,7 +19,6 @@ def parse_yaml(_path: str) -> Dict[str, Any]:
         raise Exception("yaml path 不能为空")
 
     conf_path = get_conf_abs_path(_path)
-    print(conf_path)
     if not os.path.exists(conf_path):
         raise Exception(f"{conf_path} 不存在")
 
