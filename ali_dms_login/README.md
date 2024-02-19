@@ -5,8 +5,7 @@
 - conda env create -f freeze.yml
 - playwright install
 - 修改conf.yaml 完善参数
-- 修改main.py debug = False
-- 运行python main.py
+- 运行python main.py 或者python main.py -f "本地自定义配置文件"
 
 ## 问题
 - 代码中没有对随机出现的滑块验证做逻辑处理，碰见了重新运行脚本即可
