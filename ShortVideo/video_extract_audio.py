@@ -52,7 +52,8 @@ class VideoExtractAudio:
 
         try:
             log_msg["status"] = "success"
-            ffmpeg.input(in_path).output(out_path, vn=None, map="0:a:0", loglevel="quiet").run(overwrite_output=1)
+            ffmpeg.input(in_path).output(out_path, vn=None, map="0:a:0", loglevel="quiet").run(
+                overwrite_output=True, capture_stdout=True)
         except Exception as e:
             log_msg["status"] = "failed"
             print(e)
@@ -61,6 +62,6 @@ class VideoExtractAudio:
 
 
 if __name__ == "__main__":
-    test_in_path = r"E:\tools\软件包\视频素材\火影忍者ol手游\背景音乐"
+    test_in_path = rf"E:\tools\软件包\视频素材\火影忍者ol手游\背景音乐"
     video_extract_audio = VideoExtractAudio(in_path=test_in_path)
     video_extract_audio.extract()
