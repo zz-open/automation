@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+"""
+@author 仔仔
+@date 2024-02-20 12:30:31
+@describe 自动登录阿里云DMS管理平台
+"""
 
 import os
 import sys
@@ -20,10 +25,10 @@ async def run(playwright: Playwright) -> None:
     print("=== DMS LOGIN START ===")
     browser = await playwright.chromium.launch(headless=False, chromium_sandbox=False,
                                                ignore_default_args=["--enable-automation"],
-                                               channel="chrome", )
+                                               channel="chrome", args=['--start-maximized'])
     ua = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 '
           'Safari/537.36')
-    context = await browser.new_context(user_agent=ua)
+    context = await browser.new_context(user_agent=ua, no_viewport=True)
     # 添加初始化脚本
     await context.add_init_script(path=STEALTH_PATH)
     page = await context.new_page()
