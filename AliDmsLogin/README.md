@@ -1,4 +1,4 @@
-# AliDmsLogin
+# ALiDmsLogin
 基于playwright开发，自动登录阿里云DMS管理平台
 
 ## 打包成二进制
