@@ -1,8 +1,7 @@
 @echo off
 
 set SOURCE_BIN="D:\ProgramData\miniconda3\condabin\activate.bat"
-
-cd /d "E:\jungle\github\zz-open\automation\AliDmsLogin"
+echo 当前路径：%cd%
 call %SOURCE_BIN% automation
-python main.py -f "E:\jungle\project_conf\ali_dms_login_conf.yaml"
+python main.py -f "./conf.yaml"
 PAUSE
