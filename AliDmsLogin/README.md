@@ -6,7 +6,7 @@
 pyinstaller --clean --add-data stealth.min.js:stealth.min.js --distpath ./ -n ALiDmsLogin -F main.py
 ```
 
-## free requirements.txt
+## freeze requirements.txt
 ```shell
 pipreqs.exe . --force
 ```
