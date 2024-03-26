@@ -6,6 +6,11 @@
 pyinstaller --clean --add-data stealth.min.js:stealth.min.js --distpath ./ -n ALiDmsLogin -F main.py
 ```
 
+## free requirements.txt
+```shell
+pipreqs.exe . --force
+```
+
 ## 如何使用
 ### 1. 源码执行
 - conda env create -n automation
