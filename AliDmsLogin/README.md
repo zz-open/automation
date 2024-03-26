@@ -16,15 +16,14 @@ pipreqs.exe . --force
 - conda env create -n automation
 - pip install -r requirements.txt
 - playwright install
-- playwright codegen
-- C:\Users\zaizai\AppData\Local\ms-playwright\chromium-1097
 - 根据conf.yaml.example模板 创建自己的配置文件，并替换为自己的参数
 - windows执行run.bat, Linux执行run.sh
   
 ### 2.二进制文件
-- 下载二进制文件
-- 二进制文件同级目录下，根据conf.yaml.example模板 创建自己的配置文件，并替换为自己的参数
+- 项目自带windows exe
+- exe同级目录下，根据conf.yaml.example模板 创建自己的配置文件，并替换为自己的参数
 - 点击执行
+- mac,linux平台请自行打包
 
 
 ## 注意
